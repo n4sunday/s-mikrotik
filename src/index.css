@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* UniFi-inspired palette */
+:root {
+    --background: #f4f5f7;
+    --foreground: #1b1d21;
+    --card: #ffffff;
+    --card-foreground: #1b1d21;
+    --popover: #ffffff;
+    --popover-foreground: #1b1d21;
+    --primary: #006fff;
+    --primary-foreground: #ffffff;
+    --secondary: #eef0f3;
+    --secondary-foreground: #1b1d21;
+    --muted: #eef0f3;
+    --muted-foreground: #7c828c;
+    --accent: #e9f1ff;
+    --accent-foreground: #0054c2;
+    --destructive: #e5484d;
+    --success: #1fa971;
+    --warning: #f5a524;
+    --border: #e4e6ea;
+    --input: #dcdfe4;
+    --ring: #006fff;
+    --chart-1: #006fff;
+    --chart-2: #1fa971;
+    --chart-3: #8b5cf6;
+    --chart-4: #f5a524;
+    --chart-5: #e5484d;
+    --radius: 0.5rem;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #50555e;
+    --sidebar-primary: #006fff;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e9f1ff;
+    --sidebar-accent-foreground: #006fff;
+    --sidebar-border: #e4e6ea;
+    --sidebar-ring: #006fff;
+}
+
+.dark {
+    --background: #17181b;
+    --foreground: #e8eaed;
+    --card: #1f2125;
+    --card-foreground: #e8eaed;
+    --popover: #24262b;
+    --popover-foreground: #e8eaed;
+    --primary: #006fff;
+    --primary-foreground: #ffffff;
+    --secondary: #2a2d32;
+    --secondary-foreground: #e8eaed;
+    --muted: #2a2d32;
+    --muted-foreground: #8b9099;
+    --accent: #1b2a42;
+    --accent-foreground: #5aa0ff;
+    --destructive: #f2555a;
+    --success: #39c88b;
+    --warning: #f5b03d;
+    --border: rgb(255 255 255 / 7%);
+    --input: rgb(255 255 255 / 11%);
+    --ring: #3d8bff;
+    --chart-1: #3d8bff;
+    --chart-2: #22a06b;
+    --chart-3: #a78bfa;
+    --chart-4: #f5b03d;
+    --chart-5: #f2555a;
+    --sidebar: #111214;
+    --sidebar-foreground: #8b9099;
+    --sidebar-primary: #006fff;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #1b2a42;
+    --sidebar-accent-foreground: #5aa0ff;
+    --sidebar-border: rgb(255 255 255 / 6%);
+    --sidebar-ring: #3d8bff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    }
+  html, body, #root {
+    height: 100%;
+    overflow: hidden;
+    }
+  /* Desktop app: no text-selection highlight on chrome, keep it in content */
+  button, nav, [role="tab"] {
+    user-select: none;
+    }
+}

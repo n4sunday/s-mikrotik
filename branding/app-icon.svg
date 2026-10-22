@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- App icon: macOS grid (824px tile, 100px margin) with a subtle vertical gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2683ff"/>
+      <stop offset="1" stop-color="#0060e0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy=".35" stdDeviation=".45" flood-color="#001a40" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <g transform="translate(100 100) scale(25.75)">
+    <rect width="32" height="32" rx="7.2" fill="url(#bg)" filter="url(#shadow)"/>
+    <path d="M22 9.5H13a3.25 3.25 0 0 0 0 6.5h6a3.25 3.25 0 0 1 0 6.5H10" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="22.5" cy="9.5" r="2.6" fill="#fff"/>
+    <circle cx="9.5" cy="22.5" r="2.6" fill="#fff"/>
+  </g>
+</svg>
